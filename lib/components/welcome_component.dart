@@ -16,14 +16,20 @@ class WelcomeComponent extends StatelessWidget {
           alignment: AlignmentDirectional.topStart,
           child: Text('Kahla',
               textAlign: TextAlign.center,
-              style: GoogleFonts.pacifico()
+              style: GoogleFonts.pacifico(
+                fontSize: 40.0,
+                color: global_colors.whiteColor
+              )
           ),
         ),
         Container(
           alignment: AlignmentDirectional.bottomEnd,
           child: Text('Bidha',
               textAlign: TextAlign.center,
-              style: GoogleFonts.pacifico()
+              style: GoogleFonts.pacifico(
+                  fontSize: 40.0,
+                  color: global_colors.whiteColor
+              )
           ),
         ),
       ],
