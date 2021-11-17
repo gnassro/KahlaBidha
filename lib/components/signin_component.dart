@@ -12,7 +12,7 @@ class SigninComponent extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        Text('Login',
+        Text('Signin',
             textAlign: TextAlign.center,
             style: GoogleFonts.cookie(
                 fontSize: 60.0,
