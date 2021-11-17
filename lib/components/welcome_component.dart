@@ -11,7 +11,7 @@ class WelcomeComponent extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: const [
-        Text('Optic',
+        Text('Kahla Bidha',
             textAlign: TextAlign.center,
             style: TextStyle(
                 fontSize: 200.0,
