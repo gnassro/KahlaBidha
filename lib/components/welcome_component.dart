@@ -18,7 +18,7 @@ class WelcomeComponent extends StatelessWidget {
               maxLines: 2,
               minFontSize: 20.0,
               style: GoogleFonts.pacifico(
-                  fontSize: 140.0,
+                  fontSize: 180.0,
                   color: global_colors.whiteColor,
                 height: 1.0
               )
