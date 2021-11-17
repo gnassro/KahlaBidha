@@ -59,9 +59,16 @@ class LoginComponentState extends State<LoginComponent> {
             child: PageView(
               controller: wideController,
               scrollDirection: Axis.vertical,
-              children: const [
-                SigninComponent(),
-                SignupComponent()
+              children:  [
+                SigninComponent(
+                  onSignupClick: () {
+                    wideController!.animateToPage( 2,
+                        duration: const Duration(milliseconds: 1000),
+                        curve: Curves.easeIn
+                    );
+                  },
+                ),
+                const SignupComponent()
               ],
             ),
           )
@@ -76,15 +83,21 @@ class LoginComponentState extends State<LoginComponent> {
       scrollDirection: Axis.vertical,
       children: [
         WelcomeComponent(
+          isWide: false,
           onClick: () {
             smallController!.animateToPage( 1,
                 duration: const Duration(milliseconds: 1000),
                 curve: Curves.easeIn
             );
           },
-          isWide: false,
         ),
-        const SigninComponent(
+        SigninComponent(
+          onSignupClick: () {
+            smallController!.animateToPage( 2,
+                duration: const Duration(milliseconds: 1000),
+                curve: Curves.easeIn
+            );
+          },
           isWide: false,
         ),
         const SignupComponent()

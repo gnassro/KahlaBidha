@@ -4,9 +4,11 @@ import 'package:google_fonts/google_fonts.dart';
 
 class SigninComponent extends StatelessWidget {
   final bool? isWide;
+  final VoidCallback? onSignupClick;
   const SigninComponent({
     Key? key,
-    this.isWide = true
+    this.isWide = true,
+    this.onSignupClick
   }) : super(key: key);
 
   @override
@@ -77,7 +79,19 @@ class SigninComponent extends StatelessWidget {
                   )
               ),
             ),
-          )
+          ),
+           FractionallySizedBox(
+             widthFactor: isWide! ? 0.3 : 0.6,
+             child: Row(
+               children: [
+                 const Text("Don't have an account?"),
+                 TextButton(
+                   child: const Text("Signup"),
+                   onPressed: () => onSignupClick!(),
+                 )
+               ],
+             ),
+           )
         ],
       ),
     );
