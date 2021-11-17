@@ -16,17 +16,42 @@ class WelcomeComponent extends StatelessWidget {
         child: ListView(
           shrinkWrap: true,
           children: [
-            AutoSizeText('Kahla Bidha',
-                  textAlign: TextAlign.center,
-                  maxLines: 2,
-                  minFontSize: 20.0,
-                  maxFontSize: 120.0,
-                  style: GoogleFonts.pacifico(
-                      fontSize: 180.0,
-                      color: global_colors.whiteColor,
-                    height: 1.0
-                  )
+            AutoSizeText(
+                'Kahla Bidha',
+                textAlign: TextAlign.center,
+                maxLines: 2,
+                minFontSize: 20.0,
+                maxFontSize: 120.0,
+                style: GoogleFonts.pacifico(
+                    fontSize: 180.0,
+                    color: global_colors.whiteColor,
+                )
+            ),
+            const SizedBox(
+              height: 10.0,
+            ),
+            FractionallySizedBox(
+              widthFactor: 0.3,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: const Text("Login"),
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(global_colors.whiteColor),
+                    foregroundColor: MaterialStateProperty.all(global_colors.blackColor),
+                    padding: MaterialStateProperty.all<EdgeInsets>(
+                        const EdgeInsets.only(
+                            top: 23.0,
+                            bottom: 23.0
+                        )
+                    ),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        )
+                    )
+                ),
               ),
+            )
           ],
         ),
       ),
