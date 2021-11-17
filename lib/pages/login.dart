@@ -45,7 +45,7 @@ class LoginComponentState extends State<LoginComponent> {
           ),
           Expanded(
             child: PageView(
-              controller: _smallController,
+              controller: _wideController,
               scrollDirection: Axis.vertical,
               children: const [
                 SigninComponent(),
@@ -60,14 +60,17 @@ class LoginComponentState extends State<LoginComponent> {
 
   Widget smallScreen () {
     return PageView(
-      controller: _wideController,
+      controller: _smallController,
       scrollDirection: Axis.vertical,
-      children: const [
+      children: [
         WelcomeComponent(
+          onClick: () {
+            _smallController.jumpToPage(1);
+          },
           isWide: false,
         ),
-        SigninComponent(),
-        SignupComponent()
+        const SigninComponent(),
+        const SignupComponent()
       ],
     );
   }
