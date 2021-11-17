@@ -24,6 +24,7 @@ class WelcomeComponent extends StatelessWidget {
                 maxFontSize: 120.0,
                 style: GoogleFonts.pacifico(
                     fontSize: 180.0,
+                    height: 3.0,
                     color: global_colors.whiteColor,
                 )
             ),
