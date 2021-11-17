@@ -2,7 +2,6 @@ import 'package:cupertino_rounded_corners/cupertino_rounded_corners.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:kahla_bidha_login_page/components/split_widget.dart';
-import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
 import 'package:kahla_bidha_login_page/components/signin_component.dart';
 import 'package:kahla_bidha_login_page/components/signup_component.dart';
 import 'package:kahla_bidha_login_page/components/welcome_component.dart';

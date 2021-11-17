@@ -3,8 +3,10 @@ import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
 import 'package:google_fonts/google_fonts.dart';
 
 class SigninComponent extends StatelessWidget {
+  final bool? isWide;
   const SigninComponent({
     Key? key,
+    this.isWide = true
   }) : super(key: key);
 
   @override
@@ -24,7 +26,7 @@ class SigninComponent extends StatelessWidget {
             height: 30.0,
           ),
           FractionallySizedBox(
-            widthFactor: 0.5,
+            widthFactor: isWide! ? 0.5 : 0.8,
             child: IntrinsicWidth(
               child: TextFormField(
                   decoration: InputDecoration(
@@ -40,7 +42,7 @@ class SigninComponent extends StatelessWidget {
             height: 16.0,
           ),
           FractionallySizedBox(
-            widthFactor: 0.5,
+            widthFactor:  isWide! ? 0.5 : 0.8,
             child: IntrinsicWidth(
               child: TextFormField(
                   decoration: InputDecoration(
@@ -56,7 +58,7 @@ class SigninComponent extends StatelessWidget {
             height: 16.0,
           ),
           FractionallySizedBox(
-            widthFactor: 0.3,
+            widthFactor: isWide! ? 0.3 : 0.6,
             child: ElevatedButton(
               onPressed: () {},
               child: const Text("Login"),
