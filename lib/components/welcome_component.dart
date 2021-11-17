@@ -17,6 +17,7 @@ class WelcomeComponent extends StatelessWidget {
           widthFactor: 0.5,
           child: AutoSizeText('Kahla Bidha',
               textAlign: TextAlign.center,
+              maxLines: 2,
               style: GoogleFonts.pacifico(
                   fontSize: 140.0,
                   color: global_colors.whiteColor,
