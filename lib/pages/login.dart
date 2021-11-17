@@ -16,6 +16,9 @@ class LoginComponent extends StatefulWidget {
 
 class LoginComponentState extends State<LoginComponent> {
 
+  final controller = PageController(
+    initialPage: 1;
+  );
   @override
   Widget build(BuildContext context) {
 
@@ -47,6 +50,8 @@ class LoginComponentState extends State<LoginComponent> {
 
   Widget smallScreen () {
     return PageView(
+      controller: controller,
+      scrollDirection: Axis.horizontal,
       children: const [
         WelcomeComponent(),
         SigninComponent()
