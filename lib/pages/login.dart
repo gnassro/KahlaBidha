@@ -15,13 +15,26 @@ class LoginComponent extends StatefulWidget {
 }
 
 class LoginComponentState extends State<LoginComponent> {
+  PageController? smallController;
+  PageController? wideController;
 
-  final _smallController = PageController(
-    initialPage: 0
-  );
-  final _wideController = PageController(
-      initialPage: 0
-  );
+
+  @override
+  void initState() {
+    smallController = PageController(initialPage: 0);
+    wideController = PageController(initialPage: 0);
+
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    smallController!.dispose();
+    wideController!.dispose();
+
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -45,7 +58,7 @@ class LoginComponentState extends State<LoginComponent> {
           ),
           Expanded(
             child: PageView(
-              controller: _wideController,
+              controller: wideController,
               scrollDirection: Axis.vertical,
               children: const [
                 SigninComponent(),
@@ -60,12 +73,15 @@ class LoginComponentState extends State<LoginComponent> {
 
   Widget smallScreen () {
     return PageView(
-      controller: _smallController,
+      controller: smallController,
       scrollDirection: Axis.vertical,
       children: [
         WelcomeComponent(
           onClick: () {
-            _smallController.jumpToPage(1);
+            smallController!.animateToPage( 1,
+                duration: const Duration(milliseconds: 1000),
+                curve: Curves.easeIn
+            );
           },
           isWide: false,
         ),
