@@ -84,7 +84,9 @@ class LoginComponentState extends State<LoginComponent> {
           },
           isWide: false,
         ),
-        const SigninComponent(),
+        const SigninComponent(
+          isWide: false,
+        ),
         const SignupComponent()
       ],
     );
