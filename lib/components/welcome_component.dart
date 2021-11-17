@@ -32,10 +32,10 @@ class WelcomeComponent extends StatelessWidget {
                     color: global_colors.whiteColor,
                 )
             ),
-            if (isWide!) const SizedBox(
+            if (!isWide!) const SizedBox(
               height: 80.0,
             ),
-            if (isWide!) FractionallySizedBox(
+            if (!isWide!) FractionallySizedBox(
               widthFactor: 0.5,
               child: ElevatedButton(
                 onPressed: () => onClick!(),
