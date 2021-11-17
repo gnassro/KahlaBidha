@@ -17,7 +17,7 @@ class WelcomeComponent extends StatelessWidget {
           child: Text('Kahla',
               textAlign: TextAlign.center,
               style: GoogleFonts.pacifico(
-                fontSize: 40.0,
+                fontSize: 140.0,
                 color: global_colors.whiteColor
               )
           ),
@@ -27,7 +27,7 @@ class WelcomeComponent extends StatelessWidget {
           child: Text('Bidha',
               textAlign: TextAlign.center,
               style: GoogleFonts.pacifico(
-                  fontSize: 40.0,
+                  fontSize: 140.0,
                   color: global_colors.whiteColor
               )
           ),
