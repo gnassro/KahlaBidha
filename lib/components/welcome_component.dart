@@ -12,25 +12,12 @@ class WelcomeComponent extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        Container(
-          alignment: AlignmentDirectional.topStart,
-          child: Text('Kahla',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.pacifico(
+        Text('Kahla Bidha',
+            textAlign: TextAlign.center,
+            style: GoogleFonts.pacifico(
                 fontSize: 140.0,
                 color: global_colors.whiteColor
-              )
-          ),
-        ),
-        Container(
-          alignment: AlignmentDirectional.bottomEnd,
-          child: Text('Bidha',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.pacifico(
-                  fontSize: 140.0,
-                  color: global_colors.whiteColor
-              )
-          ),
+            )
         ),
       ],
     );
