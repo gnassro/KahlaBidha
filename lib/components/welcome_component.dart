@@ -13,13 +13,16 @@ class WelcomeComponent extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        AutoSizeText('Kahla Bidha',
-            textAlign: TextAlign.center,
-            style: GoogleFonts.pacifico(
-                fontSize: 140.0,
-                color: global_colors.whiteColor,
-              height: 1.0
-            )
+        FractionallySizedBox(
+          widthFactor: 0.5,
+          child: AutoSizeText('Kahla Bidha',
+              textAlign: TextAlign.center,
+              style: GoogleFonts.pacifico(
+                  fontSize: 140.0,
+                  color: global_colors.whiteColor,
+                height: 1.0
+              )
+          ),
         ),
       ],
     );
