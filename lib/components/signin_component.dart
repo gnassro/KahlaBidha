@@ -85,7 +85,8 @@ class SigninComponent extends StatelessWidget {
           ),
            FractionallySizedBox(
              widthFactor: isWide! ? 0.3 : 0.6,
-             child: Row(
+             child: ListView(
+               scrollDirection: Axis.horizontal,
                children: [
                  const Text("Don't have an account?"),
                  TextButton(
