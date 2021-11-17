@@ -29,7 +29,7 @@ class WelcomeComponent extends StatelessWidget {
                 )
             ),
             const SizedBox(
-              height: 10.0,
+              height: 40.0,
             ),
             FractionallySizedBox(
               widthFactor: 0.3,
