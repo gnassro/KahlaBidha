@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:kahla_bidha_login_page/components/split_widget.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
 import 'package:kahla_bidha_login_page/components/signin_component.dart';
+import 'package:kahla_bidha_login_page/components/signup_component.dart';
+import 'package:kahla_bidha_login_page/components/welcome_component.dart';
 
 class LoginComponent extends StatefulWidget {
   const LoginComponent({Key? key}) : super(key: key);
@@ -35,8 +37,8 @@ class LoginComponentState extends State<LoginComponent> {
           Expanded(
               child: Container(
                 color: global_colors.blackColor,
-                child: Center(
-                  child: wideLeft(),
+                child: const Center(
+                  child: WelcomeComponent(),
                 ),
               )
           ),
@@ -53,21 +55,6 @@ class LoginComponentState extends State<LoginComponent> {
   Widget smallScreen () {
     return const Center(
         child: SigninComponent()
-    );
-  }
-
-  Widget wideLeft() {
-    return ListView(
-      shrinkWrap: true,
-      children: const [
-        Text('Optic',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 200.0,
-                fontFamily: 'Praise'
-            )
-        ),
-      ],
     );
   }
 
