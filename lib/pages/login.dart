@@ -51,7 +51,7 @@ class LoginComponentState extends State<LoginComponent> {
   Widget smallScreen () {
     return PageView(
       controller: controller,
-      scrollDirection: Axis.horizontal,
+      scrollDirection: Axis.vertical,
       children: const [
         WelcomeComponent(),
         SigninComponent()
