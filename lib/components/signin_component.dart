@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
-
+import 'package:google_fonts/google_fonts.dart';
 
 class SigninComponent extends StatelessWidget {
   const SigninComponent({
@@ -12,11 +12,11 @@ class SigninComponent extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        const Text('Login',
+        Text('Login',
             textAlign: TextAlign.center,
-            style: TextStyle(
+            style: GoogleFonts.pacifico(
                 fontSize: 60.0,
-                fontFamily: 'Praise'
+                color: global_colors.blackColor,
             )
         ),
         const SizedBox(
