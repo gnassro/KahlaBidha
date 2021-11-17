@@ -20,7 +20,7 @@ class WelcomeComponent extends StatelessWidget {
                   textAlign: TextAlign.center,
                   maxLines: 2,
                   minFontSize: 20.0,
-                  maxFontSize: 180.0,
+                  maxFontSize: 120.0,
                   style: GoogleFonts.pacifico(
                       fontSize: 180.0,
                       color: global_colors.whiteColor,
