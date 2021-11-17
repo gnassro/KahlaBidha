@@ -4,8 +4,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
 
 class WelcomeComponent extends StatelessWidget {
+  final VoidCallback? onClick;
+  final bool? isWide ;
   const WelcomeComponent({
     Key? key,
+    this.onClick,
+    this.isWide = true
   }) : super(key: key);
 
   @override
@@ -28,13 +32,13 @@ class WelcomeComponent extends StatelessWidget {
                     color: global_colors.whiteColor,
                 )
             ),
-            const SizedBox(
+            if (isWide!) const SizedBox(
               height: 80.0,
             ),
-            FractionallySizedBox(
+            if (isWide!) FractionallySizedBox(
               widthFactor: 0.5,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () => onClick!(),
                 child: const Text("Login"),
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(global_colors.whiteColor),

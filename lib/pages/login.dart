@@ -16,8 +16,11 @@ class LoginComponent extends StatefulWidget {
 
 class LoginComponentState extends State<LoginComponent> {
 
-  final controller = PageController(
+  final _smallController = PageController(
     initialPage: 0
+  );
+  final _wideController = PageController(
+      initialPage: 0
   );
   @override
   Widget build(BuildContext context) {
@@ -36,12 +39,19 @@ class LoginComponentState extends State<LoginComponent> {
       elevation: 10.0,
       margin: const EdgeInsets.all(35.0),
       child: Row(
-        children: const [
-          Expanded(
+        children:  [
+          const Expanded(
             child: WelcomeComponent(),
           ),
           Expanded(
-            child: SigninComponent(),
+            child: PageView(
+              controller: _smallController,
+              scrollDirection: Axis.vertical,
+              children: const [
+                SigninComponent(),
+                SignupComponent()
+              ],
+            ),
           )
         ],
       ),
@@ -50,11 +60,14 @@ class LoginComponentState extends State<LoginComponent> {
 
   Widget smallScreen () {
     return PageView(
-      controller: controller,
+      controller: _wideController,
       scrollDirection: Axis.vertical,
       children: const [
-        WelcomeComponent(),
-        SigninComponent()
+        WelcomeComponent(
+          isWide: false,
+        ),
+        SigninComponent(),
+        SignupComponent()
       ],
     );
   }
