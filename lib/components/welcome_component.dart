@@ -16,7 +16,8 @@ class WelcomeComponent extends StatelessWidget {
             textAlign: TextAlign.center,
             style: GoogleFonts.pacifico(
                 fontSize: 140.0,
-                color: global_colors.whiteColor
+                color: global_colors.whiteColor,
+              height: 1.0
             )
         ),
       ],
