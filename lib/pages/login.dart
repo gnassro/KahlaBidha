@@ -33,19 +33,12 @@ class LoginComponentState extends State<LoginComponent> {
       elevation: 10.0,
       margin: const EdgeInsets.all(35.0),
       child: Row(
-        children: [
+        children: const [
           Expanded(
-              child: Container(
-                color: global_colors.blackColor,
-                child: const Center(
-                  child: WelcomeComponent(),
-                ),
-              )
+            child: WelcomeComponent(),
           ),
-          const Expanded(
-              child: Center(
-                child: SigninComponent(),
-              )
+          Expanded(
+            child: SigninComponent(),
           )
         ],
       ),

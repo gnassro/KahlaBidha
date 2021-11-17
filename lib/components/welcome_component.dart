@@ -10,21 +10,26 @@ class WelcomeComponent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      shrinkWrap: true,
-      children: [
-        AutoSizeText('Kahla Bidha',
-              textAlign: TextAlign.center,
-              maxLines: 2,
-              minFontSize: 20.0,
-              maxFontSize: 180.0,
-              style: GoogleFonts.pacifico(
-                  fontSize: 180.0,
-                  color: global_colors.whiteColor,
-                height: 1.0
-              )
-          ),
-      ],
+    return Container(
+      color: global_colors.blackColor,
+      child: Center(
+        child: ListView(
+          shrinkWrap: true,
+          children: [
+            AutoSizeText('Kahla Bidha',
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  minFontSize: 20.0,
+                  maxFontSize: 180.0,
+                  style: GoogleFonts.pacifico(
+                      fontSize: 180.0,
+                      color: global_colors.whiteColor,
+                    height: 1.0
+                  )
+              ),
+          ],
+        ),
+      ),
     );
   }
 }
