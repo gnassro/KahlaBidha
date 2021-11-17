@@ -15,12 +15,12 @@ class SigninComponent extends StatelessWidget {
         Text('Signin',
             textAlign: TextAlign.center,
             style: GoogleFonts.cookie(
-                fontSize: 60.0,
+                fontSize: 80.0,
                 color: global_colors.blackColor,
             )
         ),
         const SizedBox(
-          height: 26.0,
+          height: 30.0,
         ),
         FractionallySizedBox(
           widthFactor: 0.5,
