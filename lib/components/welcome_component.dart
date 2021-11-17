@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
 
-
 class WelcomeComponent extends StatelessWidget {
   const WelcomeComponent({
     Key? key,
