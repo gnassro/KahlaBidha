@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
@@ -12,7 +13,7 @@ class WelcomeComponent extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        Text('Kahla Bidha',
+        AutoSizeText('Kahla Bidha',
             textAlign: TextAlign.center,
             style: GoogleFonts.pacifico(
                 fontSize: 140.0,
