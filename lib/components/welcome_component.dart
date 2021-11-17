@@ -12,14 +12,14 @@ class WelcomeComponent extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true,
-      children: const [
+      children: [
         FractionallySizedBox(
           widthFactor: 0.5,
           child: AutoSizeText('Kahla Bidha',
               textAlign: TextAlign.center,
               maxLines: 2,
-              minFontSize: 10.0,
-              style: TextStyle(
+              minFontSize: 20.0,
+              style: GoogleFonts.pacifico(
                   fontSize: 140.0,
                   color: global_colors.whiteColor,
                 height: 1.0
