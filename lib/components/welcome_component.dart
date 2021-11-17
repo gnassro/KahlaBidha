@@ -13,9 +13,7 @@ class WelcomeComponent extends StatelessWidget {
     return ListView(
       shrinkWrap: true,
       children: [
-        FractionallySizedBox(
-          widthFactor: 0.5,
-          child: AutoSizeText('Kahla Bidha',
+        AutoSizeText('Kahla Bidha',
               textAlign: TextAlign.center,
               maxLines: 2,
               minFontSize: 20.0,
@@ -25,7 +23,6 @@ class WelcomeComponent extends StatelessWidget {
                 height: 1.0
               )
           ),
-        ),
       ],
     );
   }
