@@ -14,7 +14,7 @@ class SigninComponent extends StatelessWidget {
       children: [
         Text('Login',
             textAlign: TextAlign.center,
-            style: GoogleFonts.pacifico(
+            style: GoogleFonts.cookie(
                 fontSize: 60.0,
                 color: global_colors.blackColor,
             )
