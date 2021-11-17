@@ -53,8 +53,11 @@ class LoginComponentState extends State<LoginComponent> {
   }
 
   Widget smallScreen () {
-    return const Center(
-        child: SigninComponent()
+    return PageView(
+      children: const [
+        WelcomeComponent(),
+        SigninComponent()
+      ],
     );
   }
 
