@@ -80,6 +80,9 @@ class SigninComponent extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            height: 6.0,
+          ),
            FractionallySizedBox(
              widthFactor: isWide! ? 0.3 : 0.6,
              child: Row(
