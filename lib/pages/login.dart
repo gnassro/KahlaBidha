@@ -1,10 +1,9 @@
 import 'package:cupertino_rounded_corners/cupertino_rounded_corners.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-
 import 'package:kahla_bidha_login_page/components/split_widget.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
+import 'package:kahla_bidha_login_page/components/signin_component.dart';
 
 class LoginComponent extends StatefulWidget {
   const LoginComponent({Key? key}) : super(key: key);
@@ -41,9 +40,9 @@ class LoginComponentState extends State<LoginComponent> {
                 ),
               )
           ),
-          Expanded(
+          const Expanded(
               child: Center(
-                child: loginField(),
+                child: SigninComponent(),
               )
           )
         ],
@@ -52,10 +51,8 @@ class LoginComponentState extends State<LoginComponent> {
   }
 
   Widget smallScreen () {
-    return Center(
-        child: loginField(
-            isWide: false
-        )
+    return const Center(
+        child: SigninComponent()
     );
   }
 
@@ -74,75 +71,5 @@ class LoginComponentState extends State<LoginComponent> {
     );
   }
 
-  Widget loginField({bool isWide = true}) {
 
-    return ListView(
-      shrinkWrap: true,
-      children: [
-        const Text('Login',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-                fontSize: 60.0,
-                fontFamily: 'Praise'
-            )
-        ),
-        const SizedBox(
-          height: 26.0,
-        ),
-        FractionallySizedBox(
-          widthFactor: 0.5,
-          child: IntrinsicWidth(
-            child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Username",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                )
-            ),
-          ),
-        ),
-        const SizedBox(
-          height: 16.0,
-        ),
-        FractionallySizedBox(
-          widthFactor: 0.5,
-          child: IntrinsicWidth(
-            child: TextFormField(
-                decoration: InputDecoration(
-                  hintText: "Password",
-                  border: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(20),
-                  ),
-                )
-            ),
-          ),
-        ),
-        const SizedBox(
-          height: 16.0,
-        ),
-        FractionallySizedBox(
-          widthFactor: 0.3,
-          child: ElevatedButton(
-            onPressed: () {},
-            child: const Text("Login"),
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(global_colors.blackColor),
-                padding: MaterialStateProperty.all<EdgeInsets>(
-                    const EdgeInsets.only(
-                        top: 23.0,
-                        bottom: 23.0
-                    )
-                ),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(18.0),
-                    )
-                )
-            ),
-          ),
-        )
-      ],
-    );
-  }
 }
