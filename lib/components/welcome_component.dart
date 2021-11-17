@@ -32,7 +32,7 @@ class WelcomeComponent extends StatelessWidget {
               height: 40.0,
             ),
             FractionallySizedBox(
-              widthFactor: 0.3,
+              widthFactor: 0.5,
               child: ElevatedButton(
                 onPressed: () {},
                 child: const Text("Login"),
