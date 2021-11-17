@@ -17,7 +17,7 @@ class LoginComponent extends StatefulWidget {
 class LoginComponentState extends State<LoginComponent> {
 
   final controller = PageController(
-    initialPage: 1
+    initialPage: 0
   );
   @override
   Widget build(BuildContext context) {
