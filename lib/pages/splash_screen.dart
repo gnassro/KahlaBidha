@@ -6,30 +6,17 @@ class Splash extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool lightMode =
-        MediaQuery.of(context).platformBrightness == Brightness.light;
     return Scaffold(
-      backgroundColor:
-      lightMode ? global_colors.whiteColor : global_colors.blackColor,
-      body: Center(
-          child: lightMode
-              ?
-          Text('Kahla Bidha',
+        backgroundColor: global_colors.whiteColor ,
+        body: Center(
+          child: Text('Kahla Bidha',
               textAlign: TextAlign.center,
               style: GoogleFonts.cookie(
                 fontSize: 80.0,
                 color: global_colors.blackColor,
               )
-          )
-              :
-          Text('Kahla Bidha',
-              textAlign: TextAlign.center,
-              style: GoogleFonts.cookie(
-                fontSize: 80.0,
-                color: global_colors.whiteColor,
-              )
-          )
-      ),
+          ),
+        )
     );
   }
 }
