@@ -15,13 +15,13 @@ class LoginComponent extends StatefulWidget {
 
 class LoginComponentState extends State<LoginComponent> {
   PageController? smallController;
-  PageController? wideController;
+  PageController? loginSignupController;
 
 
   @override
   void initState() {
     smallController = PageController(initialPage: 0);
-    wideController = PageController(initialPage: 0);
+    loginSignupController = PageController(initialPage: 0);
 
     super.initState();
   }
@@ -29,7 +29,7 @@ class LoginComponentState extends State<LoginComponent> {
   @override
   void dispose() {
     smallController!.dispose();
-    wideController!.dispose();
+    loginSignupController!.dispose();
 
     super.dispose();
   }
@@ -56,39 +56,47 @@ class LoginComponentState extends State<LoginComponent> {
             child: WelcomeComponent(),
           ),
           Expanded(
-            child: PageView(
-              physics: const NeverScrollableScrollPhysics(),
-              controller: wideController,
-              scrollDirection: Axis.vertical,
-              children:  [
-                SigninComponent(
-                  onSignupClick: () {
-                    wideController!.animateToPage( 2,
-                        duration: const Duration(milliseconds: 1000),
-                        curve: Curves.easeIn
-                    );
-                  },
-                ),
-                SignupComponent(
-                  onSigninClick: () {
-                    wideController!.animateToPage( 1,
-                        duration: const Duration(milliseconds: 1000),
-                        curve: Curves.easeIn
-                    );
-                  },
-                )
-              ],
-            ),
+            child: loginSignupPageView(),
           )
         ],
       ),
     );
   }
 
+  Widget loginSignupPageView({
+    bool? isWide = true
+  }
+  ) {
+    return PageView(
+      controller: loginSignupController,
+      scrollDirection: Axis.vertical,
+      children:  [
+        SigninComponent(
+          isWide: isWide!,
+          onSignupClick: () {
+            loginSignupController!.animateToPage( 2,
+                duration: const Duration(milliseconds: 1000),
+                curve: Curves.easeIn
+            );
+          },
+        ),
+        SignupComponent(
+          isWide: isWide,
+          onSigninClick: () {
+            loginSignupController!.animateToPage( 1,
+                duration: const Duration(milliseconds: 1000),
+                curve: Curves.easeIn
+            );
+          },
+        )
+      ],
+    );
+  }
+  
   Widget smallScreen () {
     return PageView(
       controller: smallController,
-      scrollDirection: Axis.vertical,
+      scrollDirection: Axis.horizontal,
       children: [
         WelcomeComponent(
           isWide: false,
@@ -99,22 +107,8 @@ class LoginComponentState extends State<LoginComponent> {
             );
           },
         ),
-        SigninComponent(
-          onSignupClick: () {
-            smallController!.animateToPage( 2,
-                duration: const Duration(milliseconds: 1000),
-                curve: Curves.easeIn
-            );
-          },
-          isWide: false,
-        ),
-        SignupComponent(
-          onSigninClick: () {
-            smallController!.animateToPage( 1,
-                duration: const Duration(milliseconds: 1000),
-                curve: Curves.easeIn
-            );
-          },
+        loginSignupPageView(
+          isWide: false
         )
       ],
     );
