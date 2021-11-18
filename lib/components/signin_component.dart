@@ -84,6 +84,7 @@ class SigninComponent extends StatelessWidget {
             height: 6.0,
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const Text("Don't have an account?"),
               TextButton(
