@@ -57,6 +57,7 @@ class LoginComponentState extends State<LoginComponent> {
           ),
           Expanded(
             child: PageView(
+              physics: const NeverScrollableScrollPhysics(),
               controller: wideController,
               scrollDirection: Axis.vertical,
               children:  [
