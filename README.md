@@ -1,4 +1,5 @@
-# KahlaBidha
+# KahlaBidha [Demo](https://gnassro.github.io/kahlaBidha/)
+
 
 Black and White Responsive UI Signin and Signup page to help developer for their projects.
 
@@ -10,7 +11,8 @@ Clone this project by running:
 git clone https://github.com/gnassro/KahlaBidha.git
 ```
 
-Get all dependencies used in this project by run this commande in the main project folder:
+Get all dependencies used in this project by run this command in the main project folder:
+
 
 ```
 flutter pub get
@@ -22,11 +24,12 @@ Run the project:
 flutter run
 ```
 
-Thats all !!! **Enjoy :D**
+That's all !!! **Enjoy :D**
 
 ## Note
 
-You have to change the package name of your application if you want to start your project from this repositorie (ex: com.username.appname).
+You have to change the package name of your application if you want to start your project from this repository (ex: com.username.appname).
+
 To change it just use this package [change_app_package_name](https://pub.dev/packages/change_app_package_name) and follow all steps.
 
 ## Pull Requests
