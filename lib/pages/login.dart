@@ -74,7 +74,7 @@ class LoginComponentState extends State<LoginComponent> {
         SigninComponent(
           isWide: isWide!,
           onSignupClick: () {
-            loginSignupController!.animateToPage( 2,
+            loginSignupController!.animateToPage( 1,
                 duration: const Duration(milliseconds: 1000),
                 curve: Curves.easeIn
             );
@@ -83,7 +83,7 @@ class LoginComponentState extends State<LoginComponent> {
         SignupComponent(
           isWide: isWide,
           onSigninClick: () {
-            loginSignupController!.animateToPage( 1,
+            loginSignupController!.animateToPage( 0,
                 duration: const Duration(milliseconds: 1000),
                 curve: Curves.easeIn
             );
