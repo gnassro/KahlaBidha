@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
-
+import 'package:google_fonts/google_fonts.dart';
 
 class SignupComponent extends StatelessWidget {
+  final bool? isWide;
+  final VoidCallback? onSigninClick;
   const SignupComponent({
     Key? key,
+    this.isWide = true,
+    this.onSigninClick
   }) : super(key: key);
 
   @override
@@ -13,18 +17,18 @@ class SignupComponent extends StatelessWidget {
       child: ListView(
         shrinkWrap: true,
         children: [
-          const Text('Signup',
+          Text('Signun',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontSize: 60.0,
-                  fontFamily: 'Praise'
+              style: GoogleFonts.cookie(
+                fontSize: 80.0,
+                color: global_colors.blackColor,
               )
           ),
           const SizedBox(
-            height: 26.0,
+            height: 30.0,
           ),
           FractionallySizedBox(
-            widthFactor: 0.5,
+            widthFactor: isWide! ? 0.5 : 0.8,
             child: IntrinsicWidth(
               child: TextFormField(
                   decoration: InputDecoration(
@@ -40,7 +44,23 @@ class SignupComponent extends StatelessWidget {
             height: 16.0,
           ),
           FractionallySizedBox(
-            widthFactor: 0.5,
+            widthFactor: isWide! ? 0.5 : 0.8,
+            child: IntrinsicWidth(
+              child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Email",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  )
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 16.0,
+          ),
+          FractionallySizedBox(
+            widthFactor:  isWide! ? 0.5 : 0.8,
             child: IntrinsicWidth(
               child: TextFormField(
                   decoration: InputDecoration(
@@ -56,10 +76,26 @@ class SignupComponent extends StatelessWidget {
             height: 16.0,
           ),
           FractionallySizedBox(
-            widthFactor: 0.3,
+            widthFactor: isWide! ? 0.5 : 0.8,
+            child: IntrinsicWidth(
+              child: TextFormField(
+                  decoration: InputDecoration(
+                    hintText: "Repeat Password",
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20),
+                    ),
+                  )
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 16.0,
+          ),
+          FractionallySizedBox(
+            widthFactor: isWide! ? 0.3 : 0.6,
             child: ElevatedButton(
               onPressed: () {},
-              child: const Text("Login"),
+              child: const Text("Signup"),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(global_colors.blackColor),
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -75,6 +111,19 @@ class SignupComponent extends StatelessWidget {
                   )
               ),
             ),
+          ),
+          const SizedBox(
+            height: 6.0,
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Text("have an account?"),
+              TextButton(
+                child: const Text("Signin"),
+                onPressed: () => onSigninClick!(),
+              )
+            ],
           )
         ],
       ),
