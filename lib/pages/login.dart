@@ -68,7 +68,14 @@ class LoginComponentState extends State<LoginComponent> {
                     );
                   },
                 ),
-                const SignupComponent()
+                SignupComponent(
+                  onSigninClick: () {
+                    wideController!.animateToPage( 1,
+                        duration: const Duration(milliseconds: 1000),
+                        curve: Curves.easeIn
+                    );
+                  },
+                )
               ],
             ),
           )
@@ -100,7 +107,14 @@ class LoginComponentState extends State<LoginComponent> {
           },
           isWide: false,
         ),
-        const SignupComponent()
+        SignupComponent(
+          onSigninClick: () {
+            smallController!.animateToPage( 1,
+                duration: const Duration(milliseconds: 1000),
+                curve: Curves.easeIn
+            );
+          },
+        )
       ],
     );
   }
