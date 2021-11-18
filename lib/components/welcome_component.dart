@@ -39,7 +39,12 @@ class WelcomeComponent extends StatelessWidget {
               widthFactor: 0.5,
               child: ElevatedButton(
                 onPressed: () => onClick!(),
-                child: const Text("Login"),
+                child: Text(
+                    "Login",
+                    style: GoogleFonts.pacifico(
+                      color: global_colors.blackColor,
+                    )
+                ),
                 style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(global_colors.whiteColor),
                     foregroundColor: MaterialStateProperty.all(global_colors.blackColor),
