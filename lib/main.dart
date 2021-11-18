@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:kahla_bidha_login_page/pages/login.dart';
 import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 void main() {
-  configureApp();
+  //TODO uncomment it when release
+  //configureApp();
   runApp(const MyApp());
 }
 
