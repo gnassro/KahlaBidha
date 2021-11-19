@@ -93,7 +93,12 @@ class SigninComponent extends StatelessWidget {
             children: [
               const Text("Don't have an account?"),
               TextButton(
-                child: const Text("Signup"),
+                child: const Text(
+                    "Signup",
+                    style: TextStyle(
+                        color: global_colors.blueColor
+                    )
+                ),
                 onPressed: () => onSignupClick!(),
               )
             ],
