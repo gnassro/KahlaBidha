@@ -5,7 +5,6 @@ import 'configure_nonweb.dart' if (dart.library.html) 'configure_web.dart';
 import 'package:kahla_bidha_login_page/library/colors.dart' as global_colors;
 import 'package:kahla_bidha_login_page/scroll_behavior.dart';
 import 'package:flutter/services.dart';
-import 'package:kahla_bidha_login_page/pages/splash_screen.dart';
 
 void main() {
   configureApp();
@@ -21,25 +20,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: Init.instance.initialize(),
-        builder: (context, AsyncSnapshot snapshot) {
-          // Show splash screen while waiting for app resources to load:
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return const MaterialApp(home: Splash());
-          } else {
-            // Loading is done, return the app:
-            return const AppComponent();
-          }
-        }
-    );
+    return const AppComponent();
   }
 }
-
-
 class AppComponent extends StatelessWidget {
   const AppComponent({Key? key}) : super(key: key);
   @override
@@ -53,14 +38,5 @@ class AppComponent extends StatelessWidget {
       ),
       home: const LoginComponent(),
     );
-  }
-}
-
-class Init {
-  Init._();
-  static final instance = Init._();
-
-  Future initialize() async {
-    await Future.delayed(const Duration(seconds: 3));
   }
 }
