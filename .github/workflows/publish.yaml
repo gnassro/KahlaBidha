@@ -13,9 +13,5 @@ jobs:
       - uses: gnassro/KahlaBidha@main
         with:
           webRenderer: canvaskit
-      - uses: gnassro/KahlaBidha@main
-        with:
           targetBranch: deployment-branch
-      - uses: gnassro/KahlaBidha@main
-        with:
           baseHref: /KahlaBidha/
