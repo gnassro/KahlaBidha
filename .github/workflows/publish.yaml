@@ -14,4 +14,4 @@ jobs:
         with:
           webRenderer: canvaskit
           targetBranch: deployment-branch
-          baseHref: /KahlaBidha/
+          baseHref: /kahlabidha/
