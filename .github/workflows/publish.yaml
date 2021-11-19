@@ -12,7 +12,6 @@ jobs:
           channel: stable
       - uses: gnassro/KahlaBidha@main
         with:
-          workingDir: kahlaBidhaBuild
           webRenderer: canvaskit
           targetBranch: deployment-branch
           baseHref: /KahlaBidha/
