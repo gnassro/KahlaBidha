@@ -41,7 +41,8 @@ class WelcomeComponent extends StatelessWidget {
                 onPressed: () => onClick!(),
                 child: Text(
                     "Login",
-                    style: GoogleFonts.pacifico(
+                    style: GoogleFonts.cookie(
+                      fontSize: 15.0,
                       color: global_colors.blackColor,
                     )
                 ),
