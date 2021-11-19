@@ -31,10 +31,10 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: flutter create .
+    - run: flutter pub get
       shell: bash
       working-directory: ${{inputs.workingDir}}
-    - run: flutter pub get
+    - run: flutter create .
       shell: bash
       working-directory: ${{inputs.workingDir}}
     - run: flutter pub run flutter_native_splash:create --path=flutter_native_splash.yaml
