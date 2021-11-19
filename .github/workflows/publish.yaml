@@ -10,7 +10,7 @@ jobs:
       - uses: subosito/flutter-action@v1
         with:
           channel: stable
-      - uses: gnassro/KahlaBidha@main
+      - uses: gnassro/kahlabidha@main
         with:
           webRenderer: canvaskit
           targetBranch: deployment-branch
