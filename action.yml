@@ -31,7 +31,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: flutter config --enable-web
+    - run: flutter create .
       shell: bash
       working-directory: ${{inputs.workingDir}}
     - run: flutter pub get
