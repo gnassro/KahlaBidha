@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 
 const Color? whiteColor = Color(0xffffffff);
 const Color? blackColor = Color(0xff1f1f1f);
+const Color? blueColor = Color(0xff0d6be0);
 
 MaterialColor primarySwatch() {
   return const MaterialColor(0xFFFFFFFF,<int, Color>{

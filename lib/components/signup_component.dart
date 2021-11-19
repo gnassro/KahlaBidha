@@ -95,7 +95,12 @@ class SignupComponent extends StatelessWidget {
             widthFactor: isWide! ? 0.3 : 0.6,
             child: ElevatedButton(
               onPressed: () {},
-              child: const Text("Signup"),
+              child: const Text(
+                  "Signup",
+                  style: TextStyle(
+                      color: global_colors.whiteColor
+                  )
+              ),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(global_colors.blackColor),
                   padding: MaterialStateProperty.all<EdgeInsets>(
@@ -120,7 +125,12 @@ class SignupComponent extends StatelessWidget {
             children: [
               const Text("have an account?"),
               TextButton(
-                child: const Text("Signin"),
+                child: const Text(
+                    "Signin",
+                    style: TextStyle(
+                        color: global_colors.blueColor
+                    )
+                ),
                 onPressed: () => onSigninClick!(),
               )
             ],
