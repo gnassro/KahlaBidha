@@ -30,13 +30,7 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: |
-        cd ..
-        ls -al
-        mv KahlaBidha kahlabidha
-        ls -al
-        cd kahlabidha
-        ls -al
+    - run: ls -al ../
       shell: bash
       working-directory: ${{inputs.workingDir}}
     - run: flutter pub get
