@@ -34,10 +34,10 @@ runs:
     - run: flutter config --enable-web
       shell: bash
       working-directory: ${{inputs.workingDir}}
-    - run: flutter clean
+    - run: flutter pub get
       shell: bash
       working-directory: ${{inputs.workingDir}}
-    - run: flutter pub get
+    - run: flutter pub run flutter_native_splash:create --path=flutter_native_splash.yaml
       shell: bash
       working-directory: ${{inputs.workingDir}}
     - run: flutter build web --release --web-renderer=${{inputs.webRenderer}} --base-href ${{inputs.baseHref}} ${{inputs.customArgs}}
