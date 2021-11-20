@@ -3,6 +3,8 @@
 
 Black and White Responsive UI Signin and Signup page to help developer for their projects.
 
+<img src="https://i.imgur.com/121OrhG.gif" height="400"/> <img src="https://i.imgur.com/hC4bQCJ.gif" height="400"/>
+
 ## Getting Started
 
 Clone this project by running:
