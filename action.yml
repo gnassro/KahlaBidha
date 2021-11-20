@@ -30,9 +30,6 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - run: ls -al ../
-      shell: bash
-      working-directory: ${{inputs.workingDir}}
     - run: flutter pub get
       shell: bash
       working-directory: ${{inputs.workingDir}}
