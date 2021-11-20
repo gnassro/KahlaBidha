@@ -2,6 +2,8 @@
 
 Black and White Responsive UI Signin and Signup page to help developer for their projects.
 
+<img src="https://i.imgur.com/121OrhG.gif" height="400"/> <img src="https://i.imgur.com/hC4bQCJ.gif" height="400"/>
+
 ## Getting Started
 
 Clone this project by running:
@@ -11,6 +13,7 @@ git clone https://github.com/gnassro/kahlabidha.git
 ```
 
 Get all dependencies used in this project by run this command in the main project folder:
+
 
 ```
 flutter pub get
@@ -27,6 +30,7 @@ That's all !!! **Enjoy :D**
 ## Note
 
 You have to change the package name of your application if you want to start your project from this repository (ex: com.username.appname).
+
 To change it just use this package [change_app_package_name](https://pub.dev/packages/change_app_package_name) and follow all steps.
 
 ## Pull Requests
