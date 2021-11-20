@@ -8,7 +8,7 @@ Black and White Responsive UI Signin and Signup page to help developer for their
 Clone this project by running:
 
 ```
-git clone https://github.com/gnassro/KahlaBidha.git
+git clone https://github.com/gnassro/kahlabidha.git
 ```
 
 Get all dependencies used in this project by run this command in the main project folder:
