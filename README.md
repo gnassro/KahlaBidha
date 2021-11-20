@@ -1,4 +1,4 @@
-# KahlaBidha [Demo](https://gnassro.github.io/kahlaBidha/)
+# KahlaBidha [Demo](https://gnassro.github.io/kahlabidha/)
 
 
 Black and White Responsive UI Signin and Signup page to help developer for their projects.
