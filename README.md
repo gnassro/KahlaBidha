@@ -33,7 +33,7 @@ To change it just use this package [change_app_package_name](https://pub.dev/pac
 
 I welcome and encourage all pull requests. It usually will take me within 24-48 hours to respond to any issue or request.
 
-## You are new to flutter
+## Are you new to flutter ?
 
 A few resources to get you started if this is your first Flutter project:
 
